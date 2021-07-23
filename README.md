@@ -68,7 +68,7 @@
 - the CRF engine itself creates the actual features by processing the contents of these attributes through a set of patterns defined in a template file (see the .tpl files)
   - you can test more template files:
    - ../tok-pos.tpl      *uses language-specific part-of-speech attribute in column 3*
-    - requires the corpus files in BC5CDR-IOB-pos/ or in BC5CDR-IOB-pos-w2v/
+      - requires the corpus files in BC5CDR-IOB-pos/ or in BC5CDR-IOB-pos-w2v/
    - ../tok-pos-w2v.tpl  *uses language-specific part-of-speech attribute in column 3 and word2vec cluster ID in column 4*
-    - requires the corpus files in BC5CDR-IOB-pos-w2v/
+      - requires the corpus files in BC5CDR-IOB-pos-w2v/
   - visit https://wapiti.limsi.fr/manual.html#patterns to know more about creating your own patterns
