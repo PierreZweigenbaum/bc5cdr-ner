@@ -1,0 +1,4 @@
+processed 124750 tokens with 9809 phrases; found: 7421 phrases; correct: 6613.
+accuracy:  95.59%; precision:  89.11%; recall:  67.42%; FB1:  76.76
+         Chemical: precision:  93.24%; recall:  70.92%; FB1:  80.56  4096
+          Disease: precision:  84.03%; recall:  63.16%; FB1:  72.11  3325
