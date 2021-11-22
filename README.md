@@ -56,10 +56,19 @@
 
         $ cat bc5cdr-iob-test-train-tok-rprop.eval
 
+Output:
+
         processed 124750 tokens with 9809 phrases; found: 6850 phrases; correct: 6103.
         accuracy:  95.03%; precision:  89.09%; recall:  62.22%; FB1:  73.27
                  Chemical: precision:  94.18%; recall:  63.10%; FB1:  75.57  3608
                   Disease: precision:  83.44%; recall:  61.14%; FB1:  70.57  3242
+
+| entity type | P | R | F1 | Positive |
+|---|---|---|---|---|
+| Chemical | 94.18 | 63.10 | 75.57 | 3608 |
+| Disease  | 83.44 | 61.14 | 70.57 | 3242 |
+| total    | 89.09 | 62.22 | 73.27 |      |
+|------------------|------------------|------------------|------------------|------------------|
 
 - the train, devel and test TSV files contain at least a TOKEN attribute column and a LABEL gold standard column (for training and evaluation)
   - you can add more columns with extra attributes for each token (see the bin/ directory)
@@ -69,6 +78,50 @@
   - you can test more template files:
    - ../tok-pos.tpl      *uses language-specific part-of-speech attribute in column 3*
       - requires the corpus files in BC5CDR-IOB-pos/ or in BC5CDR-IOB-pos-w2v/
+
+Output (*language-specific POS*):
+
+	    processed 124750 tokens with 9809 phrases; found: 7061 phrases; correct: 6291.
+	    accuracy:  95.27%; precision:  89.10%; recall:  64.13%; FB1:  74.58
+	    Chemical: precision:  94.19%; recall:  65.00%; FB1:  76.91  3716
+	    Disease: precision:  83.44%; recall:  63.09%; FB1:  71.85  3345
+
+| entity type | P | R | F1 | Positive |
+|---|---|---|---|---|
+| Chemical |  94.19 |  65.00 |  76.91  | 3716 |
+| Disease |  83.44 |  63.09 |  71.85  | 3345 |
+| total| 89.10 |  64.13 |  74.58 | |
+|------------------|------------------|------------------|------------------|------------------|
+
+Output (*universal POS*):
+
+    processed 124750 tokens with 9809 phrases; found: 6988 phrases; correct: 6222.
+    accuracy:  95.15%; precision:  89.04%; recall:  63.43%; FB1:  74.08
+	     Chemical: precision:  94.28%; recall:  63.96%; FB1:  76.21  3653
+	      Disease: precision:  83.30%; recall:  62.79%; FB1:  71.61  3335
+
+| entity type | P | R | F1 | Positive |
+|---|---|---|---|---|
+| Chemical |  94.28 |  63.96 |  76.21  | 3653 |
+| Disease |  83.30 |  62.79 |  71.61  | 3335 |
+| total| 89.04 |  63.43 |  74.08 | |
+|------------------|------------------|------------------|------------------|------------------|
+
    - ../tok-pos-w2v.tpl  *uses language-specific part-of-speech attribute in column 3 and word2vec cluster ID in column 4*
       - requires the corpus files in BC5CDR-IOB-pos-w2v/
+
+Output (*language-specific POS + word2vec*):
+
+    processed 124750 tokens with 9809 phrases; found: 7421 phrases; correct: 6613.
+    accuracy:  95.59%; precision:  89.11%; recall:  67.42%; FB1:  76.76
+	     Chemical: precision:  93.24%; recall:  70.92%; FB1:  80.56  4096
+	      Disease: precision:  84.03%; recall:  63.16%; FB1:  72.11  3325
+
+| entity type | P | R | F1 | Positive |
+|---|---|---|---|---|
+| Chemical |  93.24 |  70.92 |  80.56  | 4096 |
+| Disease |  84.03 |  63.16 |  72.11  | 3325 |
+| total| 89.11 |  67.42 |  76.76 | |
+|------------------|------------------|------------------|------------------|------------------|
+
   - visit https://wapiti.limsi.fr/manual.html#patterns to know more about creating your own patterns
