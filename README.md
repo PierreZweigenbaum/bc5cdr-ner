@@ -68,7 +68,6 @@ Output:
 | Chemical | 94.18 | 63.10 | 75.57 | 3608 |
 | Disease  | 83.44 | 61.14 | 70.57 | 3242 |
 | total    | 89.09 | 62.22 | 73.27 |      |
-|------------------|------------------|------------------|------------------|------------------|
 
 - the train, devel and test TSV files contain at least a TOKEN attribute column and a LABEL gold standard column (for training and evaluation)
   - you can add more columns with extra attributes for each token (see the bin/ directory)
@@ -91,7 +90,6 @@ Output (*language-specific POS*):
 | Chemical |  94.19 |  65.00 |  76.91  | 3716 |
 | Disease |  83.44 |  63.09 |  71.85  | 3345 |
 | total| 89.10 |  64.13 |  74.58 | |
-|------------------|------------------|------------------|------------------|------------------|
 
 Output (*universal POS*):
 
@@ -105,7 +103,6 @@ Output (*universal POS*):
 | Chemical |  94.28 |  63.96 |  76.21  | 3653 |
 | Disease |  83.30 |  62.79 |  71.61  | 3335 |
 | total| 89.04 |  63.43 |  74.08 | |
-|------------------|------------------|------------------|------------------|------------------|
 
    - ../tok-pos-w2v.tpl  *uses language-specific part-of-speech attribute in column 3 and word2vec cluster ID in column 4*
       - requires the corpus files in BC5CDR-IOB-pos-w2v/
@@ -122,6 +119,5 @@ Output (*language-specific POS + word2vec*):
 | Chemical |  93.24 |  70.92 |  80.56  | 4096 |
 | Disease |  84.03 |  63.16 |  72.11  | 3325 |
 | total| 89.11 |  67.42 |  76.76 | |
-|------------------|------------------|------------------|------------------|------------------|
 
   - visit https://wapiti.limsi.fr/manual.html#patterns to know more about creating your own patterns
