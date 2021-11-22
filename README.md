@@ -1,4 +1,4 @@
-# Biomedical Named Entity Recognition experiments with BioCreative V Chemical-Disease Relation (CDR)
+# Biomedical Named Entity Recognition experiments with the BioCreative V Chemical-Disease Relation (CDR) dataset
 
 ## Installation instructions
 
